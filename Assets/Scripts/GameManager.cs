@@ -67,6 +67,14 @@ public class GameManager : MonoBehaviour
 
     void NextSection()
     {
+        if (currentSection != null && currentSection.GetType() == typeof(RepeatSection))
+        {
+            if (!((RepeatSection)currentSection).hit)
+            {
+                player.GetComponent<Animator>().Play("Infected");
+            }
+        }
+
         currentSection = level.sectionList[nextSectionId++];
 
         if (currentSection.GetType() == typeof(RepeatSection))
@@ -191,6 +199,8 @@ public class GameManager : MonoBehaviour
 
         Destroy(throwable);
         player.GetComponent<Animator>().Play("Hit");
+
+        ((RepeatSection)currentSection).hit = true;
     }
 
     void OnMiss(RepeatSection section)
