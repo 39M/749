@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         {
             if (currentSection.GetType() == typeof(RepeatSection))
             {
-                CheckInputRepeatSection();
+                CheckInput();
             }
         }
     }
@@ -56,11 +56,11 @@ public class GameManager : MonoBehaviour
 
         if (currentSection.GetType() == typeof(RepeatSection))
         {
-            PreviewRepeatSection();
+            Preview();
         }
     }
 
-    void PreviewRepeatSection()
+    void Preview()
     {
         RepeatSection section = currentSection as RepeatSection;
 
@@ -68,85 +68,99 @@ public class GameManager : MonoBehaviour
         {
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {
-                PreviewOneBeatRepeatSection(beat);
+                PreviewOneBeat(beat);
             });
         }
 
-        section.hitRecordList = new List<bool>();
-        section.nextHitIndex = 0;
+        section.currentPlayBeat = section.playBeatList[0];
+        section.nextHitIndex = 1;
         foreach (var beat in section.playBeatList)
         {
-            section.hitRecordList.Add(false);
-            TimersManager.SetTimer(this, beat.time + section.hitRange - audioSource.time, delegate
-            {
-                CheckOneInputRepeatSection(section);
-            });
+            beat.hasClicked = false;
+            beat.hasHit = false;
         }
     }
 
-    void PreviewOneBeatRepeatSection(PreviewBeat beat)
+    void PreviewOneBeat(PreviewBeat beat)
     {
         audioSource.PlayOneShot(beat.audioEffect);
         Debug.Log("Beat");
     }
 
-    void CheckInputRepeatSection()
+    void CheckInput()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        RepeatSection section = currentSection as RepeatSection;
+        if (section.currentPlayBeat == null)
         {
-            RepeatSection section = currentSection as RepeatSection;
-            bool hit = false;
-            PlayBeat beat = null;
-            for (int i = 0; i < section.playBeatList.Count; i++)
-            {
-                if (!section.hitRecordList[i])
-                {
-                    if (Mathf.Abs(audioSource.time - section.playBeatList[i].time) <= section.hitRange)
-                    {
-                        hit = true;
-                        beat = section.playBeatList[i];
-                        section.hitRecordList[i] = true;
-                        break;
-                    }
-                }
-            };
+            return;
+        }
 
-            if (hit)
+        if (!section.currentPlayBeat.hasClicked && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            float offset = Mathf.Abs(audioSource.time - section.currentPlayBeat.time);
+
+            if (offset <= section.missRange)
             {
-                OnHitRepeatSection(beat);
+                section.currentPlayBeat.hasClicked = true;
+                if (offset <= section.hitRange)
+                {
+                    OnHit(section.currentPlayBeat);
+                }
+                else
+                {
+                    OnNoUseClick(section);
+                }
+                return;
+            }
+            OnNoUseClick(section);
+        }
+
+        if (audioSource.time - section.currentPlayBeat.time > section.missRange)
+        {
+            if (!section.currentPlayBeat.hasHit)
+            {
+                OnMiss(section);
+            }
+
+            if (section.nextHitIndex >= section.playBeatList.Count)
+            {
+                section.currentPlayBeat = null;
             }
             else
             {
-                OnMissRepeatSection(section);
+                section.currentPlayBeat = section.playBeatList[section.nextHitIndex++];
             }
         }
     }
 
-    void CheckOneInputRepeatSection(RepeatSection section)
+    void OnHit(PlayBeat beat)
     {
-        if (!section.hitRecordList[section.nextHitIndex++])
-        {
-            OnMissRepeatSection(section);
-        }
-    }
+        Debug.Log("成功挡住！");
 
-    void OnHitRepeatSection(PlayBeat beat)
-    {
-        Debug.Log("HIT!");
-
+        beat.hasHit = true;
         if (beat.audioEffect != null)
         {
             audioSource.PlayOneShot(beat.audioEffect);
         }
     }
 
-    void OnMissRepeatSection(RepeatSection section)
+    void OnMiss(RepeatSection section)
     {
-        Debug.Log("MISS");
+        Debug.Log("然后被喷射物糊了一脸");
 
         if (section.missAudioEffect != null)
         {
             audioSource.PlayOneShot(section.missAudioEffect);
+        }
+    }
+
+    void OnNoUseClick(RepeatSection section)
+    {
+        Debug.Log("挡空了...");
+
+        if (section.simpleClickAudioEffect != null)
+        {
+            audioSource.PlayOneShot(section.simpleClickAudioEffect);
         }
     }
 

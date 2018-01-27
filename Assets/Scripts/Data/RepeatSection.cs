@@ -10,21 +10,20 @@ public class RepeatSection : Section
 
     [Tooltip("玩家点击节拍列表")]
     public List<PlayBeat> playBeatList;
-    [Tooltip("Miss音效")]
+    [Tooltip("被喷射物打中的音效")]
     public AudioClip missAudioEffect;
+    [Tooltip("点击但是没打中的音效")]
+    public AudioClip simpleClickAudioEffect;
 
-    [Tooltip("判定成功的时间范围，+/-hitRange")]
+    [Tooltip("判定命中的时间范围，+/-hitRange")]
     public float hitRange;
+    [Tooltip("判定Miss的时间范围，+/-missRange")]
+    public float missRange;
 
-    [HideInInspector]
-    public List<bool> hitRecordList;
     [HideInInspector]
     public int nextHitIndex;
-
-    void asd()
-    {
-        
-    }
+    [HideInInspector]
+    public PlayBeat currentPlayBeat;
 }
 
 [Serializable]
@@ -39,4 +38,9 @@ public class PlayBeat
 {
     public float time;
     public AudioClip audioEffect;
+
+    [HideInInspector]
+    public bool hasClicked = false;
+    [HideInInspector]
+    public bool hasHit = false;
 }

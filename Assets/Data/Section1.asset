@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   endTime: 7
-  playStartTime: 3.5
-  playEndTime: 6.5
+  playStartTime: 3.25
+  playEndTime: 6.75
   previewBeatList:
   - time: 1
     audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
@@ -25,11 +25,23 @@ MonoBehaviour:
   playBeatList:
   - time: 4
     audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
+    hasClicked: 0
+    hasHit: 0
   - time: 5
     audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
+    hasClicked: 0
+    hasHit: 0
   - time: 6
     audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
+    hasClicked: 0
+    hasHit: 0
   missAudioEffect: {fileID: 0}
+  simpleClickAudioEffect: {fileID: 0}
   hitRange: 0.25
-  hitRecordList: 000000
-  nextHitIndex: 0
+  missRange: 0.5
+  nextHitIndex: 3
+  currentPlayBeat:
+    time: 0
+    audioEffect: {fileID: 0}
+    hasClicked: 0
+    hasHit: 0
