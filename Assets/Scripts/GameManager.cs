@@ -194,8 +194,7 @@ public class GameManager : MonoBehaviour
             audioSource.PlayOneShot(section.missAudioEffect);
         }
 
-        throwable.transform.position = level.throwableDisplayPosition;
-        Destroy(throwable, level.throwableDisplayTime);
+        Destroy(throwable);
     }
 
     void OnNoUseClick(RepeatSection section)

@@ -16,8 +16,4 @@ public class Level : ScriptableObject
     public List<GameObject> playerPrefabList;
 
     public List<GameObject> throwablePrefabList;
-    [Tooltip("糊到脸上后的显示位置")]
-    public Vector3 throwableDisplayPosition;
-    [Tooltip("糊到脸上后的显示时间")]
-    public float throwableDisplayTime;
 }
