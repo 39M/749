@@ -5,17 +5,13 @@ using UnityEngine;
 [CreateAssetMenu]
 public class RepeatSection : Section
 {
-    [Tooltip("预览节拍音效")]
-    public AudioClip previewAudioEffect;
-    [Tooltip("预览节拍时间点")]
-    public List<float> previewBeatList;
+    [Tooltip("预览节拍列表")]
+    public List<PreviewBeat> previewBeatList;
 
-    [Tooltip("击中音效")]
-    public AudioClip hitAudioEffect;
+    [Tooltip("玩家点击节拍列表")]
+    public List<PlayBeat> playBeatList;
     [Tooltip("Miss音效")]
     public AudioClip missAudioEffect;
-    [Tooltip("玩家点击时间点")]
-    public List<float> playBeatList;
 
     [Tooltip("判定成功的时间范围，+/-hitRange")]
     public float hitRange;
@@ -24,4 +20,18 @@ public class RepeatSection : Section
     public List<bool> hitRecordList;
     [HideInInspector]
     public int nextHitIndex;
+}
+
+[Serializable]
+public class PreviewBeat
+{
+    public float time;
+    public AudioClip audioEffect;
+}
+
+[Serializable]
+public class PlayBeat
+{
+    public float time;
+    public AudioClip audioEffect;
 }

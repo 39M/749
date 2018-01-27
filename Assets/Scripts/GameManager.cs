@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Timers;
 
 public class GameManager : MonoBehaviour
 {
@@ -63,24 +64,29 @@ public class GameManager : MonoBehaviour
     {
         RepeatSection section = currentSection as RepeatSection;
 
-        foreach (float t in section.previewBeatList)
+        foreach (var beat in section.previewBeatList)
         {
-            Invoke("PreviewOneBeatRepeatSection", t - audioSource.time);
+            TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
+            {
+                PreviewOneBeatRepeatSection(beat);
+            });
         }
 
         section.hitRecordList = new List<bool>();
         section.nextHitIndex = 0;
-        foreach (float t in section.playBeatList)
+        foreach (var beat in section.playBeatList)
         {
             section.hitRecordList.Add(false);
-            Invoke("CheckOneInputRepeatSection", t + section.hitRange - audioSource.time);
+            TimersManager.SetTimer(this, beat.time + section.hitRange - audioSource.time, delegate
+            {
+                CheckOneInputRepeatSection(section);
+            });
         }
     }
 
-    void PreviewOneBeatRepeatSection()
+    void PreviewOneBeatRepeatSection(PreviewBeat beat)
     {
-        RepeatSection section = currentSection as RepeatSection;
-        audioSource.PlayOneShot(section.previewAudioEffect);
+        audioSource.PlayOneShot(beat.audioEffect);
         Debug.Log("Beat");
     }
 
@@ -90,13 +96,15 @@ public class GameManager : MonoBehaviour
         {
             RepeatSection section = currentSection as RepeatSection;
             bool hit = false;
+            PlayBeat beat = null;
             for (int i = 0; i < section.playBeatList.Count; i++)
             {
                 if (!section.hitRecordList[i])
                 {
-                    if (Mathf.Abs(audioSource.time - section.playBeatList[i]) <= section.hitRange)
+                    if (Mathf.Abs(audioSource.time - section.playBeatList[i].time) <= section.hitRange)
                     {
                         hit = true;
+                        beat = section.playBeatList[i];
                         section.hitRecordList[i] = true;
                         break;
                     }
@@ -105,40 +113,36 @@ public class GameManager : MonoBehaviour
 
             if (hit)
             {
-                OnHitRepeatSection();
+                OnHitRepeatSection(beat);
             }
             else
             {
-                OnMissRepeatSection();
+                OnMissRepeatSection(section);
             }
         }
     }
 
-    void CheckOneInputRepeatSection()
+    void CheckOneInputRepeatSection(RepeatSection section)
     {
-        RepeatSection section = currentSection as RepeatSection;
-
         if (!section.hitRecordList[section.nextHitIndex++])
         {
-            OnMissRepeatSection();
+            OnMissRepeatSection(section);
         }
     }
 
-    void OnHitRepeatSection()
+    void OnHitRepeatSection(PlayBeat beat)
     {
         Debug.Log("HIT!");
-        RepeatSection section = currentSection as RepeatSection;
 
-        if (section.hitAudioEffect != null)
+        if (beat.audioEffect != null)
         {
-            audioSource.PlayOneShot(section.hitAudioEffect);
+            audioSource.PlayOneShot(beat.audioEffect);
         }
     }
 
-    void OnMissRepeatSection()
+    void OnMissRepeatSection(RepeatSection section)
     {
         Debug.Log("MISS");
-        RepeatSection section = currentSection as RepeatSection;
 
         if (section.missAudioEffect != null)
         {
