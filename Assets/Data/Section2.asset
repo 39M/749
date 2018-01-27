@@ -18,8 +18,10 @@ MonoBehaviour:
   previewBeatList:
   - time: 6.3
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
   - time: 7.3
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
   playBeatList:
   - time: 6.8
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}

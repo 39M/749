@@ -19,4 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2eb4d3e001922d54c85a418c024bac77, type: 2}
   - {fileID: 11400000, guid: a65b82b2dd1eed248b5d4c05afbb3654, type: 2}
   - {fileID: 11400000, guid: a054a21bd5183e54181fa658f53c59d7, type: 2}
-  coughAnimationAdvanceTime: 0.2
+  animationStateNames:
+  - Cough
+  - CoughShort
+  animationStateAdvanceTime:
+  - 0.2
+  - 0.05

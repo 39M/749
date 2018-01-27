@@ -79,10 +79,14 @@ public class GameManager : MonoBehaviour
     {
         foreach (var beat in section.previewBeatList)
         {
-            TimersManager.SetTimer(this, beat.time - audioSource.time - level.coughAnimationAdvanceTime, delegate
+            if (!string.IsNullOrEmpty(beat.animationState))
             {
-                enemyUpperAnimator.Play("Cough");
-            });
+                float animAdvancedTime = level.animationStateAdvanceTime[level.animationStateNames.IndexOf(beat.animationState)];
+                TimersManager.SetTimer(this, beat.time - audioSource.time - animAdvancedTime, delegate
+                {
+                    enemyUpperAnimator.Play(beat.animationState);
+                });
+            }
 
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {

@@ -18,12 +18,16 @@ MonoBehaviour:
   previewBeatList:
   - time: 10.1
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: CoughShort
   - time: 10.6
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: CoughShort
   - time: 11.1
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: CoughShort
   - time: 11.6
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: CoughShort
   playBeatList:
   - time: 14
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
