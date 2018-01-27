@@ -12,34 +12,29 @@ MonoBehaviour:
   m_Name: Section1
   m_EditorClassIdentifier: 
   startTime: 0
-  endTime: 7
-  playStartTime: 3.25
-  playEndTime: 6.75
+  endTime: 5
+  playStartTime: 0
+  playEndTime: 5
   previewBeatList:
-  - time: 1
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
-  - time: 2
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
-  - time: 3
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
+  - time: 2.5
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+  - time: 3.5
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
   playBeatList:
+  - time: 3
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
+    hasHit: 0
   - time: 4
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
     hasHit: 0
-  - time: 5
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
-    hasClicked: 0
-    hasHit: 0
-  - time: 6
-    audioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
-    hasClicked: 0
-    hasHit: 0
-  missAudioEffect: {fileID: 0}
-  simpleClickAudioEffect: {fileID: 0}
-  hitRange: 0.25
-  missRange: 0.5
-  nextHitIndex: 3
+  missAudioEffect: {fileID: 8300000, guid: e7a2f43aefaa2de44a6e84d7a34ac0c0, type: 3}
+  simpleClickAudioEffect: {fileID: 8300000, guid: b720736b83ef2644da5c5ff823b96d89,
+    type: 3}
+  hitRange: 0.05
+  missRange: 0.3
+  nextHitIndex: 2
   currentPlayBeat:
     time: 0
     audioEffect: {fileID: 0}

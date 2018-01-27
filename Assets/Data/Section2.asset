@@ -11,13 +11,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
   m_Name: Section2
   m_EditorClassIdentifier: 
-  startTime: 0
-  endTime: 0
-  playStartTime: 0
-  playEndTime: 0
-  previewBeatList: []
-  playBeatList: []
-  missAudioEffect: {fileID: 0}
-  hitRange: 0
-  hitRecordList: 
-  nextHitIndex: 0
+  startTime: 5
+  endTime: 8
+  playStartTime: 5
+  playEndTime: 8
+  previewBeatList:
+  - time: 6.3
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+  - time: 7.3
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+  playBeatList:
+  - time: 6.8
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 7.8
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  missAudioEffect: {fileID: 8300000, guid: e7a2f43aefaa2de44a6e84d7a34ac0c0, type: 3}
+  simpleClickAudioEffect: {fileID: 8300000, guid: b720736b83ef2644da5c5ff823b96d89,
+    type: 3}
+  hitRange: 0.1
+  missRange: 0.3
+  nextHitIndex: 1
+  currentPlayBeat:
+    time: 6.8
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
