@@ -24,16 +24,16 @@ MonoBehaviour:
   - time: 3
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 1
-    hasHit: 0
+    hasHit: 1
   - time: 4
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
+    hasClicked: 1
     hasHit: 0
   missAudioEffect: {fileID: 8300000, guid: e7a2f43aefaa2de44a6e84d7a34ac0c0, type: 3}
   simpleClickAudioEffect: {fileID: 8300000, guid: b720736b83ef2644da5c5ff823b96d89,
     type: 3}
   hitRange: 0.05
-  missRange: 0.3
+  missRange: 0.1
   nextHitIndex: 2
   currentPlayBeat:
     time: 0
