@@ -18,4 +18,6 @@ public class Level : ScriptableObject
     public List<GameObject> throwablePrefabList;
 
     public GameObject backgroundPrefab;
+
+    public float progressBarIncreaseValue;
 }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Timers;
 
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
     GameObject throwable;
     public Animator enemyUpperAnimator;
     public Animator enemyLowerAnimator;
+
+    public Slider progressBar;
 
     [SerializeField]
     Section currentSection;
@@ -74,6 +78,13 @@ public class GameManager : MonoBehaviour
             if (((RepeatSection)currentSection).miss)
             {
                 player.GetComponent<Animator>().Play("Infected");
+                progressBar.DOValue(progressBar.value + level.progressBarIncreaseValue, 1).SetEase(Ease.Linear).OnComplete(() =>
+                {
+                    if (progressBar.value >= 1)
+                    {
+                        SceneManager.LoadScene("GameOver");
+                    }
+                });
             }
         }
 
