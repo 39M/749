@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
   m_Name: Section5
   m_EditorClassIdentifier: 
-  startTime: 18.5
+  startTime: 18
   endTime: 20
-  playStartTime: 19
+  playStartTime: 18
   playEndTime: 20
   previewBeatList:
   - time: 18
