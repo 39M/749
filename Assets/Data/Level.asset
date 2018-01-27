@@ -24,7 +24,7 @@ MonoBehaviour:
   - 0.2
   - 0.05
   playerPrefabList:
-  - {fileID: 1425970476494264, guid: 08a01d08c0202284cbd407264d3b1d06, type: 2}
+  - {fileID: 1857226567048842, guid: 9b0fa190f7e2a5c43b25cb46c6513b34, type: 2}
   - {fileID: 1425970476494264, guid: 08a01d08c0202284cbd407264d3b1d06, type: 2}
   throwablePrefabList:
   - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
