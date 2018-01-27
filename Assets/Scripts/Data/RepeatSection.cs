@@ -32,6 +32,8 @@ public class PreviewBeat
     public float time;
     public AudioClip audioEffect;
     public string animationState;
+    public GameObject throwable;
+    public bool randomThrowable;
 }
 
 [Serializable]

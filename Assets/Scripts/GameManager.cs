@@ -108,7 +108,14 @@ public class GameManager : MonoBehaviour
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {
                 audioSource.PlayOneShot(beat.audioEffect);
-                throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count - 1)], throwableRoot.transform);
+                if (beat.randomThrowable)
+                {
+                    throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count - 1)], throwableRoot.transform);
+                }
+                else
+                {
+                    throwable = Instantiate(beat.throwable, throwableRoot.transform);
+                }
                 Debug.Log("咳嗽");
             });
         }
