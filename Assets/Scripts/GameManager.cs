@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     AudioSource audioSource;
     public Level level;
 
+    [SerializeField]
     Section currentSection;
+    [SerializeField]
     int nextSectionId = 0;
 
     void Start()
@@ -43,27 +45,18 @@ public class GameManager : MonoBehaviour
 
         if (currentSection.playStartTime <= audioSource.time && audioSource.time <= currentSection.playEndTime)
         {
-            if (currentSection.GetType() == typeof(RepeatSection))
-            {
-                CheckInput();
-            }
+            CheckInput(currentSection as RepeatSection);
         }
     }
 
     void NextSection()
     {
         currentSection = level.sectionList[nextSectionId++];
-
-        if (currentSection.GetType() == typeof(RepeatSection))
-        {
-            Preview();
-        }
+        Preview(currentSection as RepeatSection);
     }
 
-    void Preview()
+    void Preview(RepeatSection section)
     {
-        RepeatSection section = currentSection as RepeatSection;
-
         foreach (var beat in section.previewBeatList)
         {
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
@@ -84,13 +77,12 @@ public class GameManager : MonoBehaviour
     void PreviewOneBeat(PreviewBeat beat)
     {
         audioSource.PlayOneShot(beat.audioEffect);
-        Debug.Log("Beat");
+        Debug.Log("咳嗽");
     }
 
-    void CheckInput()
+    void CheckInput(RepeatSection section)
     {
-        RepeatSection section = currentSection as RepeatSection;
-        if (section.currentPlayBeat == null)
+        if (section.currentPlayBeat == null || section.nextHitIndex > section.playBeatList.Count)
         {
             return;
         }
@@ -99,7 +91,7 @@ public class GameManager : MonoBehaviour
         {
             float offset = Mathf.Abs(audioSource.time - section.currentPlayBeat.time);
 
-            if (offset <= section.missRange)
+            if (offset < section.missRange)
             {
                 section.currentPlayBeat.hasClicked = true;
                 if (offset <= section.hitRange)
@@ -120,14 +112,19 @@ public class GameManager : MonoBehaviour
             if (!section.currentPlayBeat.hasHit)
             {
                 OnMiss(section);
+                //Debug.Log(string.Format("{0} {1} {2}", audioSource.time, section.currentPlayBeat.time, section.nextHitIndex));
             }
 
             if (section.nextHitIndex >= section.playBeatList.Count)
             {
+                //Debug.Log("process to null");
                 section.currentPlayBeat = null;
+                section.nextHitIndex++;
+                //Debug.Log(string.Format("{0} {1}", section.currentPlayBeat, section.currentPlayBeat == null));
             }
             else
             {
+                //Debug.Log(string.Format("process to next beat {0}", section.nextHitIndex));
                 section.currentPlayBeat = section.playBeatList[section.nextHitIndex++];
             }
         }
