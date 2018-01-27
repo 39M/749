@@ -8,11 +8,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc799ecbaa834549aac22694f3ddf98, type: 3}
+  m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
   m_Name: Section5
   m_EditorClassIdentifier: 
-  startTime: 15
-  endTime: 17
+  startTime: 0
+  endTime: 0
   playStartTime: 0
   playEndTime: 0
-  position: {x: 0, y: 0, z: 0}
+  previewBeatList: []
+  playBeatList: []
+  missAudioEffect: {fileID: 0}
+  simpleClickAudioEffect: {fileID: 0}
+  hitRange: 0
+  missRange: 0
+  nextHitIndex: 0
+  currentPlayBeat:
+    time: 0
+    audioEffect: {fileID: 0}
+    hasClicked: 0
+    hasHit: 0
+  miss: 0
