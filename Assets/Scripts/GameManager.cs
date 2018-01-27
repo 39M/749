@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
     AudioSource audioSource;
     public Level level;
 
-    public GameObject player;
+    public GameObject sceneRoot;
+    Vector3 sceneMoveOffset;
+    GameObject player;
     public GameObject enemy;
+    public GameObject throwableRoot;
+    GameObject throwable;
     public Animator enemyUpperAnimator;
     public Animator enemyLowerAnimator;
 
@@ -24,6 +28,10 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = level.bgm;
         audioSource.Play();
+
+        sceneMoveOffset = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f));
+        sceneMoveOffset = new Vector3(sceneMoveOffset.x * 2, 0, 0);
+        GetNextPlayer();
 
         NextSection();
     }
@@ -68,10 +76,19 @@ public class GameManager : MonoBehaviour
         else if (currentSection.GetType() == typeof(MoveSection))
         {
             MoveSection section = currentSection as MoveSection;
-            Vector3 scale = enemy.transform.localScale;
-            scale.x = section.position.x > enemy.transform.position.x ? scale.x : -scale.x;
-            enemy.transform.localScale = scale;
-            enemy.transform.DOMove(section.position, section.endTime - section.startTime).SetEase(Ease.Linear);
+            if (section.selfMove)
+            {
+                Vector3 scale = enemy.transform.localScale;
+                scale.x = section.position.x > enemy.transform.position.x ? scale.x : -scale.x;
+                enemy.transform.localScale = scale;
+                enemy.transform.DOMove(section.position, section.endTime - section.startTime).SetEase(Ease.Linear);
+            }
+
+            if (section.sceneMove)
+            {
+                sceneRoot.transform.DOMove(sceneRoot.transform.position + sceneMoveOffset, section.endTime - section.startTime).SetEase(Ease.Linear);
+                GetNextPlayer();
+            }
         }
     }
 
@@ -91,6 +108,7 @@ public class GameManager : MonoBehaviour
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {
                 audioSource.PlayOneShot(beat.audioEffect);
+                throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count - 1)], throwableRoot.transform);
                 Debug.Log("咳嗽");
             });
         }
@@ -163,6 +181,8 @@ public class GameManager : MonoBehaviour
         {
             audioSource.PlayOneShot(beat.audioEffect);
         }
+
+        Destroy(throwable);
     }
 
     void OnMiss(RepeatSection section)
@@ -173,6 +193,9 @@ public class GameManager : MonoBehaviour
         {
             audioSource.PlayOneShot(section.missAudioEffect);
         }
+
+        throwable.transform.position = level.throwableDisplayPosition;
+        Destroy(throwable, level.throwableDisplayTime);
     }
 
     void OnNoUseClick(RepeatSection section)
@@ -183,6 +206,19 @@ public class GameManager : MonoBehaviour
         {
             audioSource.PlayOneShot(section.simpleClickAudioEffect);
         }
+    }
+
+    void GetNextPlayer()
+    {
+        if (player != null)
+        {
+            Destroy(player, 10);
+        }
+
+        player = Instantiate(level.playerPrefabList[Random.Range(0, level.playerPrefabList.Count - 1)],
+            sceneMoveOffset * -1,
+            Quaternion.identity,
+            sceneRoot.transform);
     }
 
     void EndGame()

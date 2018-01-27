@@ -15,4 +15,6 @@ MonoBehaviour:
   endTime: 2
   playStartTime: 0
   playEndTime: 0
+  selfMove: 1
   position: {x: -5, y: -1, z: 0}
+  sceneMove: 1
