@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
     public GameObject enemy;
+    public Animator enemyUpperAnimator;
+    public Animator enemyLowerAnimator;
 
     [SerializeField]
     Section currentSection;
@@ -77,9 +79,15 @@ public class GameManager : MonoBehaviour
     {
         foreach (var beat in section.previewBeatList)
         {
+            TimersManager.SetTimer(this, beat.time - audioSource.time - level.coughAnimationAdvanceTime, delegate
+            {
+                enemyUpperAnimator.Play("Cough");
+            });
+
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {
-                PreviewOneBeat(beat);
+                audioSource.PlayOneShot(beat.audioEffect);
+                Debug.Log("咳嗽");
             });
         }
 
@@ -90,12 +98,6 @@ public class GameManager : MonoBehaviour
             beat.hasClicked = false;
             beat.hasHit = false;
         }
-    }
-
-    void PreviewOneBeat(PreviewBeat beat)
-    {
-        audioSource.PlayOneShot(beat.audioEffect);
-        Debug.Log("咳嗽");
     }
 
     void CheckInput(RepeatSection section)

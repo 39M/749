@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 777baba51f98e494086a98bd09edb3d0, type: 2}
   - {fileID: 11400000, guid: 0f767d1b5e56bbc438d92c43dfa26b8b, type: 2}
   - {fileID: 11400000, guid: aa4afc42f311aa949bc940c63d926af1, type: 2}
+  coughAnimationAdvanceTime: 0.2
