@@ -190,6 +190,7 @@ public class GameManager : MonoBehaviour
         }
 
         Destroy(throwable);
+        player.GetComponent<Animator>().Play("Hit");
     }
 
     void OnMiss(RepeatSection section)
@@ -202,6 +203,7 @@ public class GameManager : MonoBehaviour
         }
 
         Destroy(throwable);
+        player.GetComponent<Animator>().Play("Miss");
     }
 
     void OnNoUseClick(RepeatSection section)
@@ -212,6 +214,7 @@ public class GameManager : MonoBehaviour
         {
             audioSource.PlayOneShot(section.simpleClickAudioEffect);
         }
+        player.GetComponent<Animator>().Play("HitFail");
     }
 
     void GetNextPlayer(bool init = false)
