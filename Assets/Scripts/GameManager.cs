@@ -65,17 +65,19 @@ public class GameManager : MonoBehaviour
 
         foreach (float t in section.previewBeatList)
         {
-            Invoke("PreviewOneBeat", t - audioSource.time);
+            Invoke("PreviewOneBeatRepeatSection", t - audioSource.time);
         }
 
         section.hitRecordList = new List<bool>();
+        section.nextHitIndex = 0;
         foreach (float t in section.playBeatList)
         {
             section.hitRecordList.Add(false);
+            Invoke("CheckOneInputRepeatSection", t + section.hitRange - audioSource.time);
         }
     }
 
-    void PreviewOneBeat()
+    void PreviewOneBeatRepeatSection()
     {
         RepeatSection section = currentSection as RepeatSection;
         audioSource.PlayOneShot(section.previewAudioEffect);
@@ -101,22 +103,46 @@ public class GameManager : MonoBehaviour
                 }
             };
 
-            Debug.Log(hit);
-
             if (hit)
             {
-                if (section.hitAudioEffect != null)
-                {
-                    audioSource.PlayOneShot(section.hitAudioEffect);
-                }
+                OnHitRepeatSection();
             }
             else
             {
-                if (section.missAudioEffect != null)
-                {
-                    audioSource.PlayOneShot(section.missAudioEffect);
-                }
+                OnMissRepeatSection();
             }
+        }
+    }
+
+    void CheckOneInputRepeatSection()
+    {
+        RepeatSection section = currentSection as RepeatSection;
+
+        if (!section.hitRecordList[section.nextHitIndex++])
+        {
+            OnMissRepeatSection();
+        }
+    }
+
+    void OnHitRepeatSection()
+    {
+        Debug.Log("HIT!");
+        RepeatSection section = currentSection as RepeatSection;
+
+        if (section.hitAudioEffect != null)
+        {
+            audioSource.PlayOneShot(section.hitAudioEffect);
+        }
+    }
+
+    void OnMissRepeatSection()
+    {
+        Debug.Log("MISS");
+        RepeatSection section = currentSection as RepeatSection;
+
+        if (section.missAudioEffect != null)
+        {
+            audioSource.PlayOneShot(section.missAudioEffect);
         }
     }
 

@@ -17,9 +17,11 @@ public class RepeatSection : Section
     [Tooltip("玩家点击时间点")]
     public List<float> playBeatList;
 
-    [HideInInspector]
-    public List<bool> hitRecordList;
-
     [Tooltip("判定成功的时间范围，+/-hitRange")]
     public float hitRange;
+
+    [HideInInspector]
+    public List<bool> hitRecordList;
+    [HideInInspector]
+    public int nextHitIndex;
 }
