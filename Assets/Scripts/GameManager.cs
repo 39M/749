@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = level.bgm;
         audioSource.Play();
 
         NextSection();

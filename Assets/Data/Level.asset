@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddccdafaf6cadac4cb9ebd2f89d91b59, type: 3}
   m_Name: Level
   m_EditorClassIdentifier: 
+  bgm: {fileID: 8300000, guid: 69dec6a9cd1c3c7488650180c42f0ff7, type: 3}
   sectionList:
+  - {fileID: 11400000, guid: 43409af7b13de8a4c85f61793584f793, type: 2}
   - {fileID: 11400000, guid: 43409af7b13de8a4c85f61793584f793, type: 2}
