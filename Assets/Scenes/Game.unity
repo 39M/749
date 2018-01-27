@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4994534534993740, guid: 9b0fa190f7e2a5c43b25cb46c6513b34, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1857226567048842, guid: 9b0fa190f7e2a5c43b25cb46c6513b34, type: 2}
       propertyPath: m_IsActive
@@ -362,7 +362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4616664777468388, guid: 08a01d08c0202284cbd407264d3b1d06, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1425970476494264, guid: 08a01d08c0202284cbd407264d3b1d06, type: 2}
       propertyPath: m_IsActive
@@ -371,6 +371,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08a01d08c0202284cbd407264d3b1d06, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1623521001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1623521002}
+  m_Layer: 0
+  m_Name: BackgroundRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1623521002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1623521001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1748569462
 Prefab:
   m_ObjectHideFlags: 0
@@ -528,6 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 11400000, guid: 78301a766b986cd4294123359178ee63, type: 2}
   sceneRoot: {fileID: 1402407055}
+  backgroundRoot: {fileID: 1623521001}
   enemy: {fileID: 385451966}
   throwableRoot: {fileID: 2074441683}
   enemyUpperAnimator: {fileID: 23325966}

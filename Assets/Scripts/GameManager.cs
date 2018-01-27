@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject sceneRoot;
     Vector3 sceneMoveOffset;
     GameObject player;
+    public GameObject backgroundRoot;
+    GameObject background;
     public GameObject enemy;
     public GameObject throwableRoot;
     GameObject throwable;
@@ -95,6 +97,7 @@ public class GameManager : MonoBehaviour
             if (section.sceneMove)
             {
                 sceneRoot.transform.DOMove(sceneRoot.transform.position + sceneMoveOffset, section.endTime - section.startTime).SetEase(Ease.Linear);
+                backgroundRoot.transform.DOMove(backgroundRoot.transform.position + sceneMoveOffset / 2, section.endTime - section.startTime).SetEase(Ease.Linear);
                 GetNextPlayer();
             }
         }
@@ -238,6 +241,15 @@ public class GameManager : MonoBehaviour
             init ? Vector3.zero : sceneMoveOffset * -1,
             Quaternion.identity,
             sceneRoot.transform);
+
+        if (init || (background != null && background.transform.position.x <= -sceneMoveOffset.x / 2))
+        {
+            var position = init ? Vector3.zero : background.transform.position - sceneMoveOffset;
+            background = Instantiate(level.backgroundPrefab,
+                position,
+                Quaternion.identity,
+                backgroundRoot.transform);
+        }
     }
 
     void EndGame()

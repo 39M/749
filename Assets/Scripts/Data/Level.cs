@@ -16,4 +16,6 @@ public class Level : ScriptableObject
     public List<GameObject> playerPrefabList;
 
     public List<GameObject> throwablePrefabList;
+
+    public GameObject backgroundPrefab;
 }

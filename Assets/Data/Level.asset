@@ -30,3 +30,5 @@ MonoBehaviour:
   - {fileID: 1857226567048842, guid: 9b0fa190f7e2a5c43b25cb46c6513b34, type: 2}
   throwablePrefabList:
   - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
+  backgroundPrefab: {fileID: 1006763411408378, guid: 07fccd0e7af4d4040a950fad5bb2d1a7,
+    type: 2}
