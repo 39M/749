@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         {
             MoveSection section = currentSection as MoveSection;
             Vector3 scale = enemy.transform.localScale;
-            scale.x = section.position.x > enemy.transform.position.x ? 1 : -1;
+            scale.x = section.position.x > enemy.transform.position.x ? scale.x : -scale.x;
             enemy.transform.localScale = scale;
             enemy.transform.DOMove(section.position, section.endTime - section.startTime).SetEase(Ease.Linear);
         }
