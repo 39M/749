@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cdaeff7878ad2d146bcc3e666abef01e
-timeCreated: 1517054858
+timeCreated: 1517057412
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,10 @@ TextureImporter:
     21300002: "\u4E0A\u534A\u8EAB_1"
     21300004: "\u4E0A\u534A\u8EAB_2"
     21300006: "\u4E0A\u534A\u8EAB_3"
+    21300008: UpperBody_0
+    21300010: UpperBody_1
+    21300012: UpperBody_2
+    21300014: UpperBody_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u4E0A\u534A\u8EAB_0"
+      name: UpperBody_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 236.75
-        height: 460
+        width: 313.75
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,13 +112,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "\u4E0A\u534A\u8EAB_1"
+      name: UpperBody_1
       rect:
         serializedVersion: 2
-        x: 236
+        x: 313
         y: 0
-        width: 236.75
-        height: 460
+        width: 313.75
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,13 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "\u4E0A\u534A\u8EAB_2"
+      name: UpperBody_2
       rect:
         serializedVersion: 2
-        x: 472
+        x: 626
         y: 0
-        width: 236.75
-        height: 460
+        width: 313.75
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +140,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "\u4E0A\u534A\u8EAB_3"
+      name: UpperBody_3
       rect:
         serializedVersion: 2
-        x: 708
+        x: 939
         y: 0
-        width: 236.75
-        height: 460
+        width: 313.75
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
