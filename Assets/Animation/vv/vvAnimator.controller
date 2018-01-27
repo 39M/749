@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: NijiAnimator
+  m_Name: vvAnimator
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -104,7 +104,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bb685efac8e682e4daf30af1c105bc52, type: 2}
+  m_Motion: {fileID: 7400000, guid: a5246b47d2a137d40ae544cb880a543d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -129,7 +129,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 40f0d22effb743645a6292e4f3356558, type: 2}
+  m_Motion: {fileID: 7400000, guid: b72ec4ba9772bb24eaff88debbb97892, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -155,7 +155,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c884c24daae9cb240a7ce80045606456, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3ca6c912676973b48aa36d68c5655806, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -181,7 +181,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e04b235a2672c6c4a8aadf7af6529602, type: 2}
+  m_Motion: {fileID: 7400000, guid: e69a276ddcc45b74a9ec1a6e12c2af81, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -206,7 +206,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 87445ced53f79f64597003ec3f574738, type: 2}
+  m_Motion: {fileID: 7400000, guid: 45b89f03657100f4f865c957066a33f0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
