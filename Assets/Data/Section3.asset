@@ -34,7 +34,7 @@ MonoBehaviour:
     type: 3}
   hitRange: 0.05
   missRange: 0.1
-  nextHitIndex: 2
+  nextHitIndex: 3
   currentPlayBeat:
     time: 0
     audioEffect: {fileID: 0}

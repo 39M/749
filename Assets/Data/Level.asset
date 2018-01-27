@@ -13,9 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: {fileID: 8300000, guid: 0429d5876e178a14caa917cf734f1534, type: 3}
   sectionList:
+  - {fileID: 11400000, guid: 31fb182b35058cd4bb864b6ff51cb231, type: 2}
   - {fileID: 11400000, guid: 43409af7b13de8a4c85f61793584f793, type: 2}
+  - {fileID: 11400000, guid: c14f3623c932d364d94b187270b8be13, type: 2}
   - {fileID: 11400000, guid: 2eb4d3e001922d54c85a418c024bac77, type: 2}
-  - {fileID: 11400000, guid: 777baba51f98e494086a98bd09edb3d0, type: 2}
-  - {fileID: 11400000, guid: 0f767d1b5e56bbc438d92c43dfa26b8b, type: 2}
-  - {fileID: 11400000, guid: aa4afc42f311aa949bc940c63d926af1, type: 2}
+  - {fileID: 11400000, guid: a65b82b2dd1eed248b5d4c05afbb3654, type: 2}
+  - {fileID: 11400000, guid: a054a21bd5183e54181fa658f53c59d7, type: 2}
   coughAnimationAdvanceTime: 0.2

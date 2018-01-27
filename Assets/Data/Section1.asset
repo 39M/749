@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Section1
   m_EditorClassIdentifier: 
   startTime: 0
-  endTime: 5
+  endTime: 4.15
   playStartTime: 0
-  playEndTime: 5
+  playEndTime: 4.15
   previewBeatList:
   - time: 2.5
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
@@ -23,18 +23,18 @@ MonoBehaviour:
   playBeatList:
   - time: 3
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 1
-    hasHit: 1
+    hasClicked: 0
+    hasHit: 0
   - time: 4
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 1
+    hasClicked: 0
     hasHit: 0
   missAudioEffect: {fileID: 8300000, guid: e7a2f43aefaa2de44a6e84d7a34ac0c0, type: 3}
   simpleClickAudioEffect: {fileID: 8300000, guid: b720736b83ef2644da5c5ff823b96d89,
     type: 3}
   hitRange: 0.05
   missRange: 0.1
-  nextHitIndex: 2
+  nextHitIndex: 3
   currentPlayBeat:
     time: 0
     audioEffect: {fileID: 0}
