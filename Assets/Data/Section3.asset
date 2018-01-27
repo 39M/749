@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
   m_Name: Section3
   m_EditorClassIdentifier: 
-  startTime: 8
-  endTime: 13
-  playStartTime: 8
-  playEndTime: 13
+  startTime: 10
+  endTime: 12
+  playStartTime: 10
+  playEndTime: 12
   previewBeatList:
   - time: 10.1
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
