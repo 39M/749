@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         sceneMoveOffset = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f));
         sceneMoveOffset = new Vector3(sceneMoveOffset.x * 2, 0, 0);
-        GetNextPlayer();
+        GetNextPlayer(true);
 
         NextSection();
     }
@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void GetNextPlayer()
+    void GetNextPlayer(bool init = false)
     {
         if (player != null)
         {
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
         }
 
         player = Instantiate(level.playerPrefabList[Random.Range(0, level.playerPrefabList.Count - 1)],
-            sceneMoveOffset * -1,
+            init ? Vector3.zero : sceneMoveOffset * -1,
             Quaternion.identity,
             sceneRoot.transform);
     }
