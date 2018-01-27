@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     AudioSource audioSource;
     public Level level;
 
+    public GameObject player;
+    public GameObject enemy;
+
     [SerializeField]
     Section currentSection;
     [SerializeField]
@@ -45,14 +48,29 @@ public class GameManager : MonoBehaviour
 
         if (currentSection.playStartTime <= audioSource.time && audioSource.time <= currentSection.playEndTime)
         {
-            CheckInput(currentSection as RepeatSection);
+            if (currentSection.GetType() == typeof(RepeatSection))
+            {
+                CheckInput(currentSection as RepeatSection);
+            }
         }
     }
 
     void NextSection()
     {
         currentSection = level.sectionList[nextSectionId++];
-        Preview(currentSection as RepeatSection);
+
+        if (currentSection.GetType() == typeof(RepeatSection))
+        {
+            Preview(currentSection as RepeatSection);
+        }
+        else if (currentSection.GetType() == typeof(MoveSection))
+        {
+            MoveSection section = currentSection as MoveSection;
+            Vector3 scale = enemy.transform.localScale;
+            scale.x = section.position.x > enemy.transform.position.x ? 1 : -1;
+            enemy.transform.localScale = scale;
+            enemy.transform.DOMove(section.position, section.endTime - section.startTime).SetEase(Ease.Linear);
+        }
     }
 
     void Preview(RepeatSection section)
