@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
     {
         if (currentSection == null)
         {
+
+            TimersManager.SetTimer(this, 0.5f, delegate
+            {
+                SceneManager.LoadScene("GameWin");
+            });
             return;
         }
 
@@ -82,7 +87,10 @@ public class GameManager : MonoBehaviour
                 {
                     if (progressBar.value >= 1)
                     {
-                        SceneManager.LoadScene("GameOver");
+                        TimersManager.SetTimer(this, 0.5f, delegate
+                        {
+                            SceneManager.LoadScene("GameOver");
+                        });
                     }
                 });
             }
