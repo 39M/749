@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
                 audioSource.PlayOneShot(beat.audioEffect);
                 if (beat.randomThrowable)
                 {
-                    throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count - 1)], throwableRoot.transform);
+                    throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count)], throwableRoot.transform);
                 }
                 else
                 {
@@ -233,7 +233,7 @@ public class GameManager : MonoBehaviour
             Destroy(player, 10);
         }
 
-        player = Instantiate(level.playerPrefabList[Random.Range(0, level.playerPrefabList.Count - 1)],
+        player = Instantiate(level.playerPrefabList[Random.Range(0, level.playerPrefabList.Count)],
             init ? Vector3.zero : sceneMoveOffset * -1,
             Quaternion.identity,
             sceneRoot.transform);
