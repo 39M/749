@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentSection != null && currentSection.GetType() == typeof(RepeatSection))
         {
-            if (!((RepeatSection)currentSection).hit)
+            if (((RepeatSection)currentSection).miss)
             {
                 player.GetComponent<Animator>().Play("Infected");
             }
@@ -199,8 +199,6 @@ public class GameManager : MonoBehaviour
 
         Destroy(throwable);
         player.GetComponent<Animator>().Play("Hit");
-
-        ((RepeatSection)currentSection).hit = true;
     }
 
     void OnMiss(RepeatSection section)
@@ -214,6 +212,7 @@ public class GameManager : MonoBehaviour
 
         Destroy(throwable);
         player.GetComponent<Animator>().Play("Miss");
+        ((RepeatSection)currentSection).miss = true;
     }
 
     void OnNoUseClick(RepeatSection section)

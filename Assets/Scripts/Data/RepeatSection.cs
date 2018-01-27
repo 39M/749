@@ -25,7 +25,7 @@ public class RepeatSection : Section
     [HideInInspector]
     public PlayBeat currentPlayBeat;
     [HideInInspector]
-    public bool hit = false;
+    public bool miss = false;
 }
 
 [Serializable]
