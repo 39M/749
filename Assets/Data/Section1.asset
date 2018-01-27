@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
   m_Name: Section1
   m_EditorClassIdentifier: 
+  startTime: 0
   endTime: 7
+  playStartTime: 3.5
+  playEndTime: 6.5
   previewAudioEffect: {fileID: 8300000, guid: d5c3ca0c2cd175943abdb7b3ca2313e4, type: 3}
   previewBeatList:
   - 1
@@ -23,4 +26,5 @@ MonoBehaviour:
   - 4
   - 5
   - 6
+  hitRecordList: 010101
   hitRange: 0.25
