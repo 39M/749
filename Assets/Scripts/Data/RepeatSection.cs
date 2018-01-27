@@ -20,6 +20,11 @@ public class RepeatSection : Section
     public List<bool> hitRecordList;
     [HideInInspector]
     public int nextHitIndex;
+
+    void asd()
+    {
+        
+    }
 }
 
 [Serializable]
