@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
             });
         }
 
+        section.miss = false;
         section.currentPlayBeat = section.playBeatList[0];
         section.nextHitIndex = 1;
         foreach (var beat in section.playBeatList)
