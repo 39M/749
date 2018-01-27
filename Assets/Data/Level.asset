@@ -26,7 +26,7 @@ MonoBehaviour:
   playerPrefabList:
   - {fileID: 1857226567048842, guid: 9b0fa190f7e2a5c43b25cb46c6513b34, type: 2}
   throwablePrefabList:
-  - {fileID: 1956346923916762, guid: 480c7c270d5ce234fab36041276247da, type: 2}
+  - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
   - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
   throwableDisplayPosition: {x: 0, y: 0, z: 0}
   throwableDisplayTime: 0.1
