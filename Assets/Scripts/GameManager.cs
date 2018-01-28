@@ -80,6 +80,12 @@ public class GameManager : MonoBehaviour
                 CheckInput(currentSection as RepeatSection);
             }
         }
+
+        if ((Input.GetKeyDown(KeyCode.X)))
+        {
+            progressBar.DOKill();
+            progressBar.value = 0;
+        }
     }
 
     void NextSection()
@@ -194,7 +200,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log(string.Format("按下时机准确度：【{0} of 1】", (audioSource.time - section.currentPlayBeat.time) / section.missRange));
                 section.currentPlayBeat.hasClicked = true;
-                if (offset <= section.hitRange)
+                if (offset <= section.hitRange || Input.GetKey(KeyCode.Z))
                 {
                     OnHit(section.currentPlayBeat);
                 }
