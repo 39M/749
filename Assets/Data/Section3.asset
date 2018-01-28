@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Name: Section3
   m_EditorClassIdentifier: 
   startTime: 10
-  endTime: 12
+  endTime: 12.21
   playStartTime: 10
-  playEndTime: 12
+  playEndTime: 12.21
   previewBeatList:
   - time: 10.2
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 10.7
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
     animationState: Cough
     throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
@@ -29,9 +35,13 @@ MonoBehaviour:
       type: 2}
     randomThrowable: 0
   playBeatList:
-  - time: 10.7
+  - time: 11.15
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
+    hasHit: 0
+  - time: 11.65
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
     hasHit: 0
   - time: 11.65
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
@@ -42,7 +52,7 @@ MonoBehaviour:
     type: 3}
   hitRange: 0.05
   missRange: 0.1
-  nextHitIndex: 3
+  nextHitIndex: 4
   currentPlayBeat:
     time: 0
     audioEffect: {fileID: 0}
