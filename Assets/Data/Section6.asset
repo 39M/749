@@ -80,7 +80,7 @@ MonoBehaviour:
   missAudioEffect: {fileID: 8300000, guid: f51ec41932f69d0499556a0310ae5a2a, type: 3}
   simpleClickAudioEffect: {fileID: 8300000, guid: 3006063995a25fd4dacbe6006acb780c,
     type: 3}
-  hitRange: 0.05
+  hitRange: 0.08
   missRange: 0.1
   nextHitIndex: 6
   currentPlayBeat:
