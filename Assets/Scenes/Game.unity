@@ -262,6 +262,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1015213426625358, guid: 9f88634e6d0134e42b6d257fc3064c25, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1912764449894814, guid: 9f88634e6d0134e42b6d257fc3064c25, type: 2}
       propertyPath: m_IsActive
       value: 0
