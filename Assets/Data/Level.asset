@@ -44,5 +44,5 @@ MonoBehaviour:
   - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
   backgroundPrefab: {fileID: 1006763411408378, guid: 07fccd0e7af4d4040a950fad5bb2d1a7,
     type: 2}
-  progressBarIncreaseValue: 0.0001
+  progressBarIncreaseValue: 0.25
   failAudio: {fileID: 8300000, guid: 21161623bf4b948488c96bbe6019fd1f, type: 3}
