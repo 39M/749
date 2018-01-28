@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Section6
   m_EditorClassIdentifier: 
   startTime: 25.5
-  endTime: 31.01
+  endTime: 31.1
   playStartTime: 25.5
-  playEndTime: 31.01
+  playEndTime: 31.1
   previewBeatList:
   - time: 25.55
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
@@ -63,8 +63,8 @@ MonoBehaviour:
     hasHit: 0
   - time: 28
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
   - time: 28.95
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
