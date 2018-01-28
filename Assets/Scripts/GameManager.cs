@@ -42,14 +42,19 @@ public class GameManager : MonoBehaviour
         NextSection();
     }
 
+    bool win = false;
     void Update()
     {
         if (currentSection == null)
         {
-            TimersManager.SetTimer(this, 0.5f, delegate
+            if (!win)
             {
-                SceneManager.LoadScene("GameWin");
-            });
+                TimersManager.SetTimer(this, 0.5f, delegate
+                {
+                    SceneManager.LoadScene("GameWin");
+                });
+                win = true;
+            }
             return;
         }
 
@@ -174,6 +179,7 @@ public class GameManager : MonoBehaviour
 
             if (offset < section.missRange)
             {
+                Debug.Log(string.Format("按下时机准确度：【{0} of 1】", (audioSource.time - section.currentPlayBeat.time) / section.missRange));
                 section.currentPlayBeat.hasClicked = true;
                 if (offset <= section.hitRange)
                 {
