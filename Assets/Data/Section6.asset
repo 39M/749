@@ -29,18 +29,24 @@ MonoBehaviour:
       type: 2}
     randomThrowable: 0
   - time: 27.5
-    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
     animationState: Cough
     throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
       type: 2}
     randomThrowable: 0
   - time: 28.45
-    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
     animationState: Cough
     throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
       type: 2}
     randomThrowable: 0
   - time: 29.4
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 29.9
     audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
     animationState: Cough
     throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
@@ -55,37 +61,41 @@ MonoBehaviour:
   playBeatList:
   - time: 26.05
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
   - time: 27
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
   - time: 28
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 1
     hasHit: 1
   - time: 28.95
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
   - time: 29.9
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
+  - time: 30.35
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
+    hasHit: 1
   - time: 30.9
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasClicked: 1
+    hasHit: 1
   missAudioEffect: {fileID: 8300000, guid: f51ec41932f69d0499556a0310ae5a2a, type: 3}
   simpleClickAudioEffect: {fileID: 8300000, guid: 3006063995a25fd4dacbe6006acb780c,
     type: 3}
   hitRange: 0.08
   missRange: 0.1
-  nextHitIndex: 6
+  nextHitIndex: 8
   currentPlayBeat:
-    time: 30.9
-    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    time: 0
+    audioEffect: {fileID: 0}
     hasClicked: 0
     hasHit: 0
-  miss: 1
+  miss: 0
