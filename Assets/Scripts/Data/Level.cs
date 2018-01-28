@@ -20,4 +20,6 @@ public class Level : ScriptableObject
     public GameObject backgroundPrefab;
 
     public float progressBarIncreaseValue;
+
+    public AudioClip failAudio;
 }

@@ -93,10 +93,15 @@ public class GameManager : MonoBehaviour
                 {
                     if (progressBar.value >= 1)
                     {
-                        TimersManager.SetTimer(this, 0.5f, delegate
+                        Time.timeScale = 0;
+                        audioSource.Stop();
+                        audioSource.volume *= 3;
+                        audioSource.PlayOneShot(level.failAudio);
+                        transform.DOMove(Vector3.one, 3).OnComplete(() =>
                         {
+                            Time.timeScale = 1;
                             SceneManager.LoadScene("GameOver");
-                        });
+                        }).SetUpdate(true);
                     }
                 });
             }
