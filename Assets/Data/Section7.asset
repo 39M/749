@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bae325723944849b9adeccfd3dfd59, type: 3}
+  m_Name: Section7
+  m_EditorClassIdentifier: 
+  startTime: 33
+  endTime: 39
+  playStartTime: 33
+  playEndTime: 39
+  previewBeatList:
+  - time: 33.75
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 34.7
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 35.65
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 36.6
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  playBeatList:
+  - time: 34.2
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
+    hasHit: 0
+  - time: 35.2
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
+    hasHit: 1
+  - time: 37.5
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 37.1
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  missAudioEffect: {fileID: 8300000, guid: f51ec41932f69d0499556a0310ae5a2a, type: 3}
+  simpleClickAudioEffect: {fileID: 8300000, guid: 3006063995a25fd4dacbe6006acb780c,
+    type: 3}
+  hitRange: 0.05
+  missRange: 0.1
+  nextHitIndex: 3
+  currentPlayBeat:
+    time: 37.5
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  miss: 1
