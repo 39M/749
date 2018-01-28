@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
     {
         if (currentSection == null)
         {
-
             TimersManager.SetTimer(this, 0.5f, delegate
             {
                 SceneManager.LoadScene("GameWin");
@@ -138,6 +137,8 @@ public class GameManager : MonoBehaviour
             TimersManager.SetTimer(this, beat.time - audioSource.time, delegate
             {
                 audioSource.PlayOneShot(beat.audioEffect);
+
+                Destroy(throwable);
                 if (beat.randomThrowable)
                 {
                     throwable = Instantiate(level.throwablePrefabList[Random.Range(0, level.throwablePrefabList.Count)], throwableRoot.transform);
@@ -251,10 +252,7 @@ public class GameManager : MonoBehaviour
 
     void GetNextPlayer(bool init = false)
     {
-        if (player != null)
-        {
-            Destroy(player, 10);
-        }
+        Destroy(player, 10);
 
         player = Instantiate(level.playerPrefabList[Random.Range(0, level.playerPrefabList.Count)],
             init ? Vector3.zero : sceneMoveOffset * -1,
