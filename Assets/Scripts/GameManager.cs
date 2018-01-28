@@ -31,8 +31,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = level.bgm;
+        audioSource.pitch = 1;
         audioSource.Play();
 
         sceneMoveOffset = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f));
@@ -123,6 +125,12 @@ public class GameManager : MonoBehaviour
                 backgroundRoot.transform.DOMove(backgroundRoot.transform.position + sceneMoveOffset / 2, section.endTime - section.startTime).SetEase(Ease.Linear);
                 GetNextPlayer();
             }
+        }
+        else if (currentSection.GetType() == typeof(ChangeSpeedSection))
+        {
+            ChangeSpeedSection section = currentSection as ChangeSpeedSection;
+            Time.timeScale = section.speed;
+            audioSource.pitch = section.speed;
         }
     }
 
