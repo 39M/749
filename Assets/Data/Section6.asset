@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Section6
   m_EditorClassIdentifier: 
   startTime: 25.5
-  endTime: 31
+  endTime: 31.01
   playStartTime: 25.5
-  playEndTime: 31
+  playEndTime: 31.01
   previewBeatList:
   - time: 25.55
     audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
