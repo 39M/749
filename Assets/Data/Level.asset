@@ -23,6 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e363e85fb144eae4b9e11703bb77ecb3, type: 2}
   - {fileID: 11400000, guid: aa4afc42f311aa949bc940c63d926af1, type: 2}
   - {fileID: 11400000, guid: 446e14d5039f91c46b1ad390dbbbf5d3, type: 2}
+  - {fileID: 11400000, guid: 6a9161399c9f57c499b21075a445b663, type: 2}
+  - {fileID: 11400000, guid: fcc0a7c9a68403a439650bb3b47e604c, type: 2}
+  - {fileID: 11400000, guid: 088df6d59012959498cc00cbbcf415f3, type: 2}
+  - {fileID: 11400000, guid: 627f416b24fd5a847a593322f2be1cf7, type: 2}
   animationStateNames:
   - Cough
   - CoughShort
