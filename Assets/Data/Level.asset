@@ -27,6 +27,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fcc0a7c9a68403a439650bb3b47e604c, type: 2}
   - {fileID: 11400000, guid: 088df6d59012959498cc00cbbcf415f3, type: 2}
   - {fileID: 11400000, guid: 627f416b24fd5a847a593322f2be1cf7, type: 2}
+  - {fileID: 11400000, guid: 441fe14f487fd6944b4ac75e73fa73fc, type: 2}
+  - {fileID: 11400000, guid: 373b0a12ce5712d42881be476d61857e, type: 2}
+  - {fileID: 11400000, guid: b07910ca127cfca41a47ea60aa51ed5f, type: 2}
   animationStateNames:
   - Cough
   - CoughShort
@@ -41,4 +44,4 @@ MonoBehaviour:
   - {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca, type: 2}
   backgroundPrefab: {fileID: 1006763411408378, guid: 07fccd0e7af4d4040a950fad5bb2d1a7,
     type: 2}
-  progressBarIncreaseValue: 0.5
+  progressBarIncreaseValue: 0.0001

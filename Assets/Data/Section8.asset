@@ -12,37 +12,100 @@ MonoBehaviour:
   m_Name: Section8
   m_EditorClassIdentifier: 
   startTime: 40.8
-  endTime: 42
-  playStartTime: 41
-  playEndTime: 42
+  endTime: 50
+  playStartTime: 40.8
+  playEndTime: 50
   previewBeatList:
   - time: 40.9
-    audioEffect: {fileID: 0}
-    animationState: 
-    throwable: {fileID: 0}
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
     randomThrowable: 0
   - time: 41.9
-    audioEffect: {fileID: 0}
-    animationState: 
-    throwable: {fileID: 0}
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 42.85
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 44.75
+    audioEffect: {fileID: 8300000, guid: e6269da2112bdce41ac81e035ebb5506, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 45.75
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 46.7
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 47.65
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
+    randomThrowable: 0
+  - time: 48.6
+    audioEffect: {fileID: 8300000, guid: b0827f156cd2ee84f95293a10d5554ab, type: 3}
+    animationState: Cough
+    throwable: {fileID: 1935606418976318, guid: d2b7b9b3edaeca748a3438c1221ccaca,
+      type: 2}
     randomThrowable: 0
   playBeatList:
   - time: 41.4
-    audioEffect: {fileID: 0}
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
     hasHit: 0
   - time: 42.4
-    audioEffect: {fileID: 0}
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
     hasHit: 0
-  missAudioEffect: {fileID: 0}
-  simpleClickAudioEffect: {fileID: 0}
-  hitRange: 0
-  missRange: 0
-  nextHitIndex: 0
+  - time: 43.35
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 45.25
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 46.2
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 47.15
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 48.15
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  - time: 49.1
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 0
+    hasHit: 0
+  missAudioEffect: {fileID: 8300000, guid: f51ec41932f69d0499556a0310ae5a2a, type: 3}
+  simpleClickAudioEffect: {fileID: 8300000, guid: 3006063995a25fd4dacbe6006acb780c,
+    type: 3}
+  hitRange: 0.05
+  missRange: 0.1
+  nextHitIndex: 9
   currentPlayBeat:
     time: 0
     audioEffect: {fileID: 0}
     hasClicked: 0
     hasHit: 0
-  miss: 0
+  miss: 1
