@@ -35,22 +35,22 @@ MonoBehaviour:
       type: 2}
     randomThrowable: 0
   playBeatList:
-  - time: 11.15
+  - time: 10.7
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 0
     hasHit: 0
+  - time: 11.15
+    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
+    hasClicked: 1
+    hasHit: 1
   - time: 11.65
     audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
     hasClicked: 1
-    hasHit: 0
-  - time: 11.65
-    audioEffect: {fileID: 8300000, guid: 84830f32a11132c4e84840e1475574a9, type: 3}
-    hasClicked: 0
-    hasHit: 0
+    hasHit: 1
   missAudioEffect: {fileID: 8300000, guid: f51ec41932f69d0499556a0310ae5a2a, type: 3}
   simpleClickAudioEffect: {fileID: 8300000, guid: 3006063995a25fd4dacbe6006acb780c,
     type: 3}
-  hitRange: 0.05
+  hitRange: 0.08
   missRange: 0.1
   nextHitIndex: 4
   currentPlayBeat:
